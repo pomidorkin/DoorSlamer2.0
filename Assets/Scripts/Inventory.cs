@@ -6,7 +6,7 @@ using UnityEngine;
 public class Inventory
 {
     public int coins = 3000;
-    public int gems = 1000;
+    public int gems = 3;
 
     public int doorDamage = 15;
     public int doorDamageUpgradeCounter = 1;

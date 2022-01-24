@@ -37,7 +37,7 @@ public class ZombieSpawner : MonoBehaviour
             }
         }
 
-        Debug.Log("counter: " + counter);
+        //Debug.Log("counter: " + counter);
     }
 
     public void SetSpawnBool(bool value)
