@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject zombiePrefab; // Should be a list of zombies
+    [SerializeField] Zombie zombiePrefab; // Should be a list of zombies
     bool spawn = true;
     [SerializeField] float minSpawnDelay = 1.0f;
     [SerializeField] float maxSpawnDelay = 5.0f;
 
     private float counter = 0f;
     private float spawnAccelerationSpeed = 19.0f;
+    private int healthBooster = 0;
+    [SerializeField] int healthBoosterValue = 10;
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -35,6 +37,7 @@ public class ZombieSpawner : MonoBehaviour
             {
                 maxSpawnDelay -= 0.16f;
             }
+            healthBooster += healthBoosterValue;
         }
 
         //Debug.Log("counter: " + counter);
@@ -47,6 +50,7 @@ public class ZombieSpawner : MonoBehaviour
 
     private void SpawnZombie()
     {
-        Instantiate(zombiePrefab, transform.position, Quaternion.identity);
+        Zombie zombie = Instantiate(zombiePrefab, transform.position, Quaternion.identity) as Zombie;
+        zombie.AddHealth(healthBooster);
     }
 }

@@ -1679,6 +1679,7 @@ GameObject:
   - component: {fileID: 481652398}
   - component: {fileID: 481652397}
   - component: {fileID: 481652400}
+  - component: {fileID: 481652401}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1764,6 +1765,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a42ace479a6abf43a4eca5d34210a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &481652401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481652396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3605d0f356c83944a92e899d24f193e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  building: {fileID: 0}
+  healthDisplay: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  hoodMenu: {fileID: 0}
+  gameManagerScript: {fileID: 0}
+  bonus: 3
+  balanceDisplay: {fileID: 1211918825}
 --- !u!1 &489119968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 673571207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 481652401}
+        m_TargetAssemblyTypeName: RewAd, Assembly-CSharp
+        m_MethodName: ShowCoinAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &673571207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7036,6 +7068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balanceDisplay: {fileID: 1211918825}
+  disableAdsButton: {fileID: 1035106782}
 --- !u!1 &1694155731
 GameObject:
   m_ObjectHideFlags: 0

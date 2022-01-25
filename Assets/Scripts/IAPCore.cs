@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Purchasing; //библиотека с покупками, будет доступна когда активируем сервисы
+using UnityEngine.UI;
 
 public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений из Unity Purchasing
 {
@@ -12,6 +13,7 @@ public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений и
 
     SaveManager saveManager;
     [SerializeField] BalanceDisplay balanceDisplay;
+    [SerializeField] Button disableAdsButton;
 
     void Start()
     {
@@ -79,6 +81,7 @@ public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений и
 
             saveManager.State.removeAddPurchased = true;
             SaveManager.Instance.Save();
+            disableAdsButton.interactable = false;
 
         }
         else if (String.Equals(args.purchasedProduct.definition.id, gems100, StringComparison.Ordinal))

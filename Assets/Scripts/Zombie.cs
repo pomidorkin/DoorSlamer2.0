@@ -126,4 +126,9 @@ public class Zombie : MonoBehaviour
     {
         buildingSlot.DecreaseHealth(damage);
     }
+
+    public void AddHealth(int amount)
+    {
+        health += amount;
+    }
 }
