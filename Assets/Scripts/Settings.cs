@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,13 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     [SerializeField] Slider musicVolumeSlider;
+    [SerializeField] Slider soundVolumeSlider;
     SaveManager saveManager;
     AudioSource backgroundMusic;
     [SerializeField] GameObject muteImageMusic;
     [SerializeField] GameObject loudImageMusic;
+    [SerializeField] GameObject muteImageSound;
+    [SerializeField] GameObject loudImageSound;
     void Start()
     {
         saveManager = SaveManager.Instance;
@@ -19,7 +23,16 @@ public class Settings : MonoBehaviour
         backgroundMusic = FindObjectOfType<AudioController>().GetAudioSource();
         musicVolumeSlider.value = saveManager.State.musicVolume;
         musicVolumeSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        soundVolumeSlider.value = saveManager.State.soundVolume;
+        soundVolumeSlider.onValueChanged.AddListener(delegate { SoundValueChancgeCheck(); });
 
+        ControlImage();
+    }
+
+    public void SoundValueChancgeCheck()
+    {
+        saveManager.State.soundVolume = soundVolumeSlider.value;
+        saveManager.Save();
         ControlImage();
     }
 
@@ -42,6 +55,17 @@ public class Settings : MonoBehaviour
         {
             loudImageMusic.SetActive(false);
             muteImageMusic.SetActive(true);
+        }
+
+        if (saveManager.State.soundVolume > 0)
+        {
+            loudImageSound.SetActive(true);
+            muteImageSound.SetActive(false);
+        }
+        else
+        {
+            loudImageSound.SetActive(false);
+            muteImageSound.SetActive(true);
         }
     }
 }

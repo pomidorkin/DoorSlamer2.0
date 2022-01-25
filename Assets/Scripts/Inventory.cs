@@ -19,4 +19,5 @@ public class Inventory
     public bool removeAddPurchased { set; get; }
 
     public float musicVolume = 1.0f;
+    public float soundVolume = 1.0f;
 }

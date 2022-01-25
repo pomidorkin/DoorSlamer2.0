@@ -10,6 +10,8 @@ public class IAPCore : MonoBehaviour, IStoreListener //дл€ получени€ сообщений и
 
     public static string noads = "noads"; //одноразовые - nonconsumable
     public static string gems100 = "gems100"; //многоразовые - consumable
+    public static string gems300 = "gems300";
+    public static string gems1000 = "gems1000";
 
     SaveManager saveManager;
     [SerializeField] BalanceDisplay balanceDisplay;
@@ -37,6 +39,8 @@ public class IAPCore : MonoBehaviour, IStoreListener //дл€ получени€ сообщений и
         //ѕрописываем свои товары дл€ добавлени€ в билдер
         builder.AddProduct(noads, ProductType.NonConsumable);
         builder.AddProduct(gems100, ProductType.Consumable);
+        builder.AddProduct(gems300, ProductType.Consumable);
+        builder.AddProduct(gems1000, ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
     }
@@ -49,6 +53,16 @@ public class IAPCore : MonoBehaviour, IStoreListener //дл€ получени€ сообщений и
     public void Buy_gems100()
     {
         BuyProductID(gems100);
+    }
+
+    public void Buy_gems300()
+    {
+        BuyProductID(gems300);
+    }
+
+    public void Buy_gems1000()
+    {
+        BuyProductID(gems1000);
     }
 
     void BuyProductID(string productId)
@@ -90,6 +104,24 @@ public class IAPCore : MonoBehaviour, IStoreListener //дл€ получени€ сообщений и
 
             //действи€ при покупке
             saveManager.State.gems += 100;
+            SaveManager.Instance.Save();
+            balanceDisplay.DisplayBalance();
+        }
+        else if (String.Equals(args.purchasedProduct.definition.id, gems300, StringComparison.Ordinal))
+        {
+            Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+
+            //действи€ при покупке
+            saveManager.State.gems += 300;
+            SaveManager.Instance.Save();
+            balanceDisplay.DisplayBalance();
+        }
+        else if (String.Equals(args.purchasedProduct.definition.id, gems1000, StringComparison.Ordinal))
+        {
+            Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
+
+            //действи€ при покупке
+            saveManager.State.gems += 1000;
             SaveManager.Instance.Save();
             balanceDisplay.DisplayBalance();
         }
