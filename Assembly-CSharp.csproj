@@ -61,7 +61,6 @@
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Scripts\HealthDisplay.cs" />
-    <Compile Include="Assets\GUI PRO Kit - Casual Game\Scripts\PanelCasualGame.cs" />
     <Compile Include="Assets\Scripts\PopUpManager.cs" />
     <Compile Include="Assets\Scripts\SpecialBuilding.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
@@ -75,7 +74,6 @@
     <Compile Include="Assets\Scripts\EnergyCounter.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
-    <Compile Include="Assets\GUI PRO Kit - Casual Game\Scripts\PanelControlCasualGame.cs" />
     <Compile Include="Assets\Scripts\AdInitialize.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\MarketManager.cs" />
@@ -83,7 +81,6 @@
     <Compile Include="Assets\Scripts\BalanceDisplay.cs" />
     <Compile Include="Assets\Scripts\IAPCore.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
-    <Compile Include="Assets\GUI PRO Kit - Casual Game\Extensions\UIParticle\UIParticleSystem.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\AudioController.cs" />
@@ -97,13 +94,11 @@
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Common.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.dll" />
-    <None Include="Assets\GUI PRO Kit - Casual Game\Extensions\UIParticle\hidden particle.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\GUI PRO Kit - Casual Game\ResourcesData\Shader &amp; Materials\UIAdditive.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Core.dll" />
     <None Include="Assets\GoogleMobileAds\link.xml" />
     <None Include="Assets\PolygonZombies\Shaders\POLYGON_Zombies.shader" />
@@ -117,7 +112,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
-    <None Include="Assets\GUI PRO Kit - Casual Game\ResourcesData\Shader &amp; Materials\MobileAdditive.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Android.dll" />
     <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />

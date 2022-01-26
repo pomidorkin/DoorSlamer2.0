@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33875454781525784}
   - component: {fileID: 23107556860933880}
   - component: {fileID: 64749388577293812}
-  - component: {fileID: -3771386723199252230}
-  - component: {fileID: -6272001264220044859}
+  - component: {fileID: 88694922552359896}
+  - component: {fileID: 7735563046201361391}
   m_Layer: 0
   m_Name: SM_Item_Pumpkin_01
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43662075597756484, guid: a7453e9816505964ba7d7332c77fd980, type: 2}
---- !u!54 &-3771386723199252230
+--- !u!54 &88694922552359896
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-6272001264220044859
+  m_CollisionDetection: 2
+--- !u!114 &7735563046201361391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

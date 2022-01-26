@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33050964148682544}
   - component: {fileID: 23745940497166030}
   - component: {fileID: 64499572120190672}
-  - component: {fileID: -3032208123874341847}
-  - component: {fileID: -6046928227127530795}
+  - component: {fileID: -665190224141017292}
+  - component: {fileID: 9114711923936640336}
   m_Layer: 0
   m_Name: SM_Item_Ball_Soccer_01
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43560109255574700, guid: 1762ef7d8ca120246afda60151e4e2e7, type: 2}
---- !u!54 &-3032208123874341847
+--- !u!54 &-665190224141017292
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-6046928227127530795
+  m_CollisionDetection: 2
+--- !u!114 &9114711923936640336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

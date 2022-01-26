@@ -8329,7 +8329,7 @@ GameObject:
   - component: {fileID: 95135716839004538}
   m_Layer: 0
   m_Name: Zombie_Father_Male_02
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

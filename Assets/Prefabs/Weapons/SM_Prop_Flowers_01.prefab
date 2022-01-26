@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33207292805477038}
   - component: {fileID: 23327652151713072}
   - component: {fileID: 64584247293531598}
-  - component: {fileID: 3650597194767164845}
-  - component: {fileID: -1190162488850065920}
+  - component: {fileID: -1666371803585917059}
+  - component: {fileID: -796169515610163791}
   m_Layer: 0
   m_Name: SM_Prop_Flowers_01
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43558646393452298, guid: 06bdda644de8c7f43ba2744fe16d1ae5, type: 2}
---- !u!54 &3650597194767164845
+--- !u!54 &-1666371803585917059
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-1190162488850065920
+  m_CollisionDetection: 2
+--- !u!114 &-796169515610163791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

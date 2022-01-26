@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33970735536113324}
   - component: {fileID: 23808258115083898}
   - component: {fileID: 64490215584518372}
-  - component: {fileID: -1085754973486151941}
-  - component: {fileID: -9064869626903282549}
+  - component: {fileID: 6725376128319399136}
+  - component: {fileID: 4229922732611959201}
   m_Layer: 0
   m_Name: SM_Prop_PotPlant_04
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43078872435665998, guid: aad2f9d313e28a14cbb31184aff366ed, type: 2}
---- !u!54 &-1085754973486151941
+--- !u!54 &6725376128319399136
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-9064869626903282549
+  m_CollisionDetection: 2
+--- !u!114 &4229922732611959201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33214733831022662}
   - component: {fileID: 23569872886927818}
   - component: {fileID: 64427739932437450}
-  - component: {fileID: -2353015640210740147}
-  - component: {fileID: -2336087364469783466}
+  - component: {fileID: -8179320537657955090}
+  - component: {fileID: 7028778482820972561}
   m_Layer: 0
   m_Name: SM_Prop_Keg_01
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43833883923178550, guid: 4e36f4ee1af94704a82475407b397571, type: 2}
---- !u!54 &-2353015640210740147
+--- !u!54 &-8179320537657955090
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-2336087364469783466
+  m_CollisionDetection: 2
+--- !u!114 &7028778482820972561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

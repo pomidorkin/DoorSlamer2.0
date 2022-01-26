@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] int weaponDamage = 15;
-    // Start is called before the first frame update
     public int GetWeaponDamage()
     {
         return weaponDamage;

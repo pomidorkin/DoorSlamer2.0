@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.3f1 (32358a8527b4) revision 3290506'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'en' Physical Memory: 8059 MB
+OS: 'Windows 10 Pro; OS build 22000.434; Version 2009; 64bit' Language: 'en' Physical Memory: 8059 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,7 @@ C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52842
+51980
 Successfully changed project path to: C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
 C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 126.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 95.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.3f1 (32358a8527b4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/Resources/UnitySubsystems
@@ -63,80 +63,103 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56952
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006495 seconds.
+Registered in 0.006114 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 121.77 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 94.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.611 seconds
+- Completed reload, in  0.578 seconds
 Domain Reload Profiling:
-	ReloadAssembly (611ms)
-		BeginReloadAssembly (66ms)
+	ReloadAssembly (578ms)
+		BeginReloadAssembly (64ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (471ms)
-			LoadAssemblies (64ms)
+		EndReloadAssembly (440ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (99ms)
+			SetupTypeCache (100ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (295ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (262ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (122ms)
+				RefreshPlugins (95ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (115ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010457 seconds.
+Registered in 0.008889 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\pbriu\Documents\UnityProjects\DoorSlamer\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\pbriu\Documents\UnityProjects\DoorSlamer\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 124.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 89.96 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\pbriu\Documents\UnityProjects\DoorSlamer\ProjectSettings\GvhProjectSettings.xml
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <00c558282d074245ab3496e2d108079b>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <00c558282d074245ab3496e2d108079b>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <00c558282d074245ab3496e2d108079b>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
+  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <4f1125f2992b4f908005b65fbadb4211>:0 
+  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <4f1125f2992b4f908005b65fbadb4211>:0 
+  at Google.ProjectSettings.Save () [0x0006d] in /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:820 , Project settings were not saved!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+Google.Logger:Log (string,Google.LogLevel) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
+Google.ProjectSettings:Save () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:842)
+Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:484)
+Google.ProjectSettings:SetBool (string,bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:496)
+Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:986)
+Google.IOSResolver:.cctor () (at /Users/chkuang/Workspace/git/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:689)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: /Users/chkuang/Workspace/git/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 842)
+
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.947 seconds
+- Completed reload, in  1.896 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1948ms)
-		BeginReloadAssembly (164ms)
+	ReloadAssembly (1896ms)
+		BeginReloadAssembly (171ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1688ms)
-			LoadAssemblies (85ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1626ms)
+			LoadAssemblies (95ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (277ms)
+			SetupTypeCache (267ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (1158ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (1109ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (124ms)
-				BeforeProcessingInitializeOnLoad (105ms)
-				ProcessInitializeOnLoadAttributes (846ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (829ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -144,12 +167,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4547 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 107 unused Assets / (2.9 MB). Loaded Objects now: 5002.
-Memory consumption went from 204.7 MB to 201.8 MB.
-Total: 7.365800 ms (FindLiveObjects: 0.407800 ms CreateObjectMapping: 0.371700 ms MarkObjects: 5.950100 ms  DeleteObjects: 0.635000 ms)
+Unloading 4540 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 107 unused Assets / (2.9 MB). Loaded Objects now: 4995.
+Memory consumption went from 198.9 MB to 196.0 MB.
+Total: 8.323100 ms (FindLiveObjects: 0.451100 ms CreateObjectMapping: 0.647900 ms MarkObjects: 6.447500 ms  DeleteObjects: 0.774900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,59 +186,103 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 861001.192888 seconds.
-  path: Assets/Scenes/MainMenuScene.unity
-  artifactKey: Guid(91e632241baae494cb355b4c72640647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenuScene.unity using Guid(91e632241baae494cb355b4c72640647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698dde979c714b8a478009c36b6234d3') in 0.025030 seconds 
+  Time since last request: 4930.369032 seconds.
+  path: Assets/ThirdPartyAssets/Models/SM_Bld_Church_01.prefab
+  artifactKey: Guid(a603f239fabbe7340b05a53dd8588e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/SM_Bld_Church_01.prefab using Guid(a603f239fabbe7340b05a53dd8588e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f8bce0c15f42c385e81bd69acc69012') in 0.055702 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.915931 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Daughter_01.prefab
-  artifactKey: Guid(7726852b74327584980d2b8f88a12239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Daughter_01.prefab using Guid(7726852b74327584980d2b8f88a12239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac586674366ba607246b767355c782c5') in 0.377339 seconds 
+  Time since last request: 0.000043 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Jacket_Female_01.prefab
+  artifactKey: Guid(3c17e5f77af5ac54d991cf6c5d87082b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Jacket_Female_01.prefab using Guid(3c17e5f77af5ac54d991cf6c5d87082b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b8d20b965a9ce1082e94534b903e85f') in 0.016599 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Mother_02.prefab
-  artifactKey: Guid(81984b095a0d9ba4fb19e7c0a3819ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Mother_02.prefab using Guid(81984b095a0d9ba4fb19e7c0a3819ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f930ae0d3aeabde87c77562eb934d1') in 0.175772 seconds 
+  Time since last request: 0.000049 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Grandma_Female_01.prefab
+  artifactKey: Guid(da241a1c1c2f4b344926c84ef25128ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Grandma_Female_01.prefab using Guid(da241a1c1c2f4b344926c84ef25128ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e98821dbb23e127aac871046d145a96') in 0.011957 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Son_01.prefab
-  artifactKey: Guid(91b945b0668d8214598d65c9246536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Son_01.prefab using Guid(91b945b0668d8214598d65c9246536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d132bf3ac56fd80f36f2b13e0ac10c') in 0.130921 seconds 
+  Time since last request: 0.000030 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Mother_Female_02.prefab
+  artifactKey: Guid(307d9d29af4880045b27ca9862422012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Mother_Female_02.prefab using Guid(307d9d29af4880045b27ca9862422012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005dbd44326165321f24aaf9fd418fa8') in 0.010973 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_SchoolBoy_01.prefab
-  artifactKey: Guid(7340936ca1fe0c14e88d905904049120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_SchoolBoy_01.prefab using Guid(7340936ca1fe0c14e88d905904049120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66588dae7e8fdf02bc14f8c6df7266d4') in 0.120076 seconds 
+  Time since last request: 0.000016 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Gangster_Male_01.prefab
+  artifactKey: Guid(5090368b8e8213146ba1934c73da6149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Gangster_Male_01.prefab using Guid(5090368b8e8213146ba1934c73da6149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54b2d790806b09c9e0b765d91ddf032c') in 0.010433 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.617124 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/Character_Business_Man_01.prefab
-  artifactKey: Guid(e85f10072d335224984d9b8ae2e93843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Business_Man_01.prefab using Guid(e85f10072d335224984d9b8ae2e93843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2686363107393d73f0432cc79520cb8') in 0.120871 seconds 
+  Time since last request: 0.000019 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Cheerleader_Female_01.prefab
+  artifactKey: Guid(4003093fe4a231c4d9c155a6540ec590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Cheerleader_Female_01.prefab using Guid(4003093fe4a231c4d9c155a6540ec590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f559c5c5af385f7da106b04b833f0e01') in 0.014935 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/Character_Gunman_01.prefab
-  artifactKey: Guid(e3d9a5b7a19f9684d9b63308cdfa95bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Gunman_01.prefab using Guid(e3d9a5b7a19f9684d9b63308cdfa95bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e13eca77bac0df42f0ef997c49203d9d') in 0.133650 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Military_Male_01.prefab
+  artifactKey: Guid(7c521770c9e780444b9b27cb7183739f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Military_Male_01.prefab using Guid(7c521770c9e780444b9b27cb7183739f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad7cb1ac0a6630aa015b7201ba048ac') in 0.012474 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Bandana_01.prefab
-  artifactKey: Guid(f1c64eb7c41754a4186bda09c49b1478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Bandana_01.prefab using Guid(f1c64eb7c41754a4186bda09c49b1478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5a2b420cf7fd12c971541290369fb17') in 0.142231 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Hipster_Female_01.prefab
+  artifactKey: Guid(fe2234a2aed6c504ab0c225d7e1a1cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Hipster_Female_01.prefab using Guid(fe2234a2aed6c504ab0c225d7e1a1cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e299f8fedddd6a1e04a89300df1ab8e6') in 0.011747 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Pouch_01.prefab
-  artifactKey: Guid(6cf8ff28f333c54479452abd0fe7235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Pouch_01.prefab using Guid(6cf8ff28f333c54479452abd0fe7235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63cad241be1eeb89b3811e344da71f64') in 0.132724 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 0.000034 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_FastfoodWorker_Male_01.prefab
+  artifactKey: Guid(2bce6f5837b77684b98b6c0116612065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_FastfoodWorker_Male_01.prefab using Guid(2bce6f5837b77684b98b6c0116612065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84f211fab992f05021bd96d0b7151943') in 0.013524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Jacket_Male_01.prefab
+  artifactKey: Guid(ff2cafa10adeb4b43ab64ebe754ad3d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Jacket_Male_01.prefab using Guid(ff2cafa10adeb4b43ab64ebe754ad3d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46fb039f0022573ee3af3246064ac26c') in 0.010839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Father_Male_01.prefab
+  artifactKey: Guid(08eb0c5855619374381691dec1799669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Father_Male_01.prefab using Guid(08eb0c5855619374381691dec1799669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115957f6d6a0b853223af0c903c29057') in 0.016283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Biker_Male_01.prefab
+  artifactKey: Guid(6cb63163261c5a84a8a7410cf0775135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Biker_Male_01.prefab using Guid(6cb63163261c5a84a8a7410cf0775135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc96476fa9255744d799c62472680a2') in 0.012225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.792910 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Punk_Female_01.prefab
+  artifactKey: Guid(eb1c725db5a403a40bd409a9bea29cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Punk_Female_01.prefab using Guid(eb1c725db5a403a40bd409a9bea29cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '133bb5d3908f8ecdc6413efff6313479') in 0.016391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Son_Male_01.prefab
+  artifactKey: Guid(e0e167f92e65a254da5ef2b62ad5e710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Son_Male_01.prefab using Guid(e0e167f92e65a254da5ef2b62ad5e710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82fb12cd47cd03b27320fb5807d3fb6') in 0.013769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_ShopKeeper_Female_01.prefab
+  artifactKey: Guid(3b53e862d7e73954ea2e8f07c55cec60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_ShopKeeper_Female_01.prefab using Guid(3b53e862d7e73954ea2e8f07c55cec60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca188fcc9b8506167910baec936623f') in 0.011428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_RiotCop_Male_01.prefab
+  artifactKey: Guid(83620e573d3f2254199cd946a8601720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_RiotCop_Male_01.prefab using Guid(83620e573d3f2254199cd946a8601720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a16cbfbb7b273385af67515f591a5d') in 0.010041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.103809 seconds.
+  path: Assets/ThirdPartyAssets/Models/Zombie_Underwear_Male_01.prefab
+  artifactKey: Guid(46e3fad9d63edad4e95366d675950f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdPartyAssets/Models/Zombie_Underwear_Male_01.prefab using Guid(46e3fad9d63edad4e95366d675950f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291fcca0e1d98872a1dae47401b4347b') in 0.014653 seconds 

@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Inventory
 {
-    public int coins = 3000;
-    public int gems = 3;
+    public int coins = 9999;
+    public int gems = 0;
 
     public int doorDamage = 15;
     public int doorDamageUpgradeCounter = 1;

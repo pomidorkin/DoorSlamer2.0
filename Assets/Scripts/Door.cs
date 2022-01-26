@@ -7,12 +7,16 @@ public class Door : MonoBehaviour
     [SerializeField] GameObject doorPrefab;
     [SerializeField] int doorDamage;
     public Animator animator;
+    [SerializeField] AudioSource doorOpeningSound;
+    SaveManager saveManager;
+    [SerializeField] bool mainDoor = false;
 
     void Start()
     {
-        var saveManager = SaveManager.Instance;
+        saveManager = SaveManager.Instance;
         SaveManager.Instance.Load();
         doorDamage = saveManager.State.doorDamage;
+        doorOpeningSound.volume = saveManager.State.soundVolume;
     }
     void Update()
     {
@@ -31,6 +35,14 @@ public class Door : MonoBehaviour
     {
         animator.Play("DoorOpeningAnimation");
         //animator.Play("DoorOpeningAnimationNormal");
+    }
+
+    public void PlayDoorSound()
+    {
+        if (mainDoor)
+        {
+            doorOpeningSound.Play();
+        }
     }
 
     public int GetDoorDamage()

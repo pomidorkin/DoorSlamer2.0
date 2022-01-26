@@ -6788,7 +6788,7 @@ GameObject:
   - component: {fileID: 95781449023516610}
   m_Layer: 0
   m_Name: Zombie_Hipster_Female_01
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

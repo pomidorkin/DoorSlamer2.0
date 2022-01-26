@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33592876209659916}
   - component: {fileID: 23409254975006496}
   - component: {fileID: 64068686913959960}
-  - component: {fileID: 3781952026049721724}
-  - component: {fileID: 897508158713642285}
+  - component: {fileID: -6998896183053827538}
+  - component: {fileID: -1330804474829475074}
   m_Layer: 0
   m_Name: SM_Prop_Pot_01
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43281501978067658, guid: 60f81c5796dcbd546a105bd08d59b436, type: 2}
---- !u!54 &3781952026049721724
+--- !u!54 &-6998896183053827538
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &897508158713642285
+  m_CollisionDetection: 2
+--- !u!114 &-1330804474829475074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

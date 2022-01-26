@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 33463664491061464}
   - component: {fileID: 23108364526901506}
   - component: {fileID: 64749986499816366}
-  - component: {fileID: -4588863547057761077}
-  - component: {fileID: -1061273133244071589}
+  - component: {fileID: 4491190343984652982}
+  - component: {fileID: 1882276891541866249}
   m_Layer: 0
   m_Name: SM_Prop_Propanel_02
   m_TagString: Weapon
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43685604458510064, guid: b03a63f343af3d34ea88f887244c664a, type: 2}
---- !u!54 &-4588863547057761077
+--- !u!54 &4491190343984652982
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-1061273133244071589
+  m_CollisionDetection: 2
+--- !u!114 &1882276891541866249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
