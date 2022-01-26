@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\2021.2.3f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker2
 -projectPath
 C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker2.log
 -srvPort
 52842
 Successfully changed project path to: C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
@@ -47,7 +47,7 @@ C:/Users/pbriu/Documents/UnityProjects/DoorSlamer
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 126.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 132.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.3f1 (32358a8527b4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/Resources/UnitySubsystems
@@ -63,39 +63,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006495 seconds.
+Registered in 0.006386 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 121.77 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 117.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.611 seconds
+- Completed reload, in  0.589 seconds
 Domain Reload Profiling:
-	ReloadAssembly (611ms)
-		BeginReloadAssembly (66ms)
+	ReloadAssembly (590ms)
+		BeginReloadAssembly (64ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (471ms)
-			LoadAssemblies (64ms)
+		EndReloadAssembly (451ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (99ms)
+			SetupTypeCache (92ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (295ms)
+			SetupLoadedEditorAssemblies (285ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (122ms)
+				RefreshPlugins (118ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (115ms)
+				ProcessInitializeOnLoadAttributes (110ms)
 				ProcessInitializeOnLoadMethodAttributes (41ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -103,40 +103,40 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010457 seconds.
+Registered in 0.010414 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\pbriu\Documents\UnityProjects\DoorSlamer\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\pbriu\Documents\UnityProjects\DoorSlamer\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 124.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 116.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.947 seconds
+- Completed reload, in  1.834 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1948ms)
-		BeginReloadAssembly (164ms)
+	ReloadAssembly (1835ms)
+		BeginReloadAssembly (153ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1688ms)
-			LoadAssemblies (85ms)
+		EndReloadAssembly (1593ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (277ms)
+			SetupTypeCache (249ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (1158ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (1119ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (124ms)
-				BeforeProcessingInitializeOnLoad (105ms)
-				ProcessInitializeOnLoadAttributes (846ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (116ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (822ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -144,12 +144,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4547 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 107 unused Assets / (2.9 MB). Loaded Objects now: 5002.
 Memory consumption went from 204.7 MB to 201.8 MB.
-Total: 7.365800 ms (FindLiveObjects: 0.407800 ms CreateObjectMapping: 0.371700 ms MarkObjects: 5.950100 ms  DeleteObjects: 0.635000 ms)
+Total: 7.247900 ms (FindLiveObjects: 0.481000 ms CreateObjectMapping: 0.388500 ms MarkObjects: 5.737000 ms  DeleteObjects: 0.640200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,59 +163,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 861001.192888 seconds.
-  path: Assets/Scenes/MainMenuScene.unity
-  artifactKey: Guid(91e632241baae494cb355b4c72640647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenuScene.unity using Guid(91e632241baae494cb355b4c72640647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698dde979c714b8a478009c36b6234d3') in 0.025030 seconds 
+  Time since last request: 861033.621391 seconds.
+  path: Assets/PolygonWestern/Prefabs/Characters/Character_Badguy_01.prefab
+  artifactKey: Guid(085e53ee40ad24b40a83bd90705ad460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Badguy_01.prefab using Guid(085e53ee40ad24b40a83bd90705ad460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ab98bde92666259e684affd5891f23') in 0.376630 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.915931 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Daughter_01.prefab
-  artifactKey: Guid(7726852b74327584980d2b8f88a12239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Daughter_01.prefab using Guid(7726852b74327584980d2b8f88a12239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac586674366ba607246b767355c782c5') in 0.377339 seconds 
+  Time since last request: 0.000072 seconds.
+  path: Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachment_Holster_01.prefab
+  artifactKey: Guid(2d5ca81f2171f9549861fc19481993d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachment_Holster_01.prefab using Guid(2d5ca81f2171f9549861fc19481993d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f53e5f25002a289f4d15ab7253def5') in 0.143724 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Mother_02.prefab
-  artifactKey: Guid(81984b095a0d9ba4fb19e7c0a3819ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Mother_02.prefab using Guid(81984b095a0d9ba4fb19e7c0a3819ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f930ae0d3aeabde87c77562eb934d1') in 0.175772 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_Son_01.prefab
-  artifactKey: Guid(91b945b0668d8214598d65c9246536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_Son_01.prefab using Guid(91b945b0668d8214598d65c9246536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d132bf3ac56fd80f36f2b13e0ac10c') in 0.130921 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/PolygonTown/Prefabs/Characters/Character_SchoolBoy_01.prefab
-  artifactKey: Guid(7340936ca1fe0c14e88d905904049120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonTown/Prefabs/Characters/Character_SchoolBoy_01.prefab using Guid(7340936ca1fe0c14e88d905904049120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66588dae7e8fdf02bc14f8c6df7266d4') in 0.120076 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 28.617124 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/Character_Business_Man_01.prefab
-  artifactKey: Guid(e85f10072d335224984d9b8ae2e93843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Business_Man_01.prefab using Guid(e85f10072d335224984d9b8ae2e93843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2686363107393d73f0432cc79520cb8') in 0.120871 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/Character_Gunman_01.prefab
-  artifactKey: Guid(e3d9a5b7a19f9684d9b63308cdfa95bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Gunman_01.prefab using Guid(e3d9a5b7a19f9684d9b63308cdfa95bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e13eca77bac0df42f0ef997c49203d9d') in 0.133650 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Bandana_01.prefab
-  artifactKey: Guid(f1c64eb7c41754a4186bda09c49b1478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Bandana_01.prefab using Guid(f1c64eb7c41754a4186bda09c49b1478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5a2b420cf7fd12c971541290369fb17') in 0.142231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Pouch_01.prefab
-  artifactKey: Guid(6cf8ff28f333c54479452abd0fe7235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PolygonWestern/Prefabs/Characters/SM_CharacterAttachments_Pouch_01.prefab using Guid(6cf8ff28f333c54479452abd0fe7235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63cad241be1eeb89b3811e344da71f64') in 0.132724 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 0.000180 seconds.
+  path: Assets/PolygonWestern/Prefabs/Characters/Character_Sheriff_01.prefab
+  artifactKey: Guid(15a550206f811c346b37f3a3f4495178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Sheriff_01.prefab using Guid(15a550206f811c346b37f3a3f4495178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a6508446758f7fe02ca81cdf973b57') in 0.114974 seconds 
