@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Inventory
 {
-    public int coins = 9999;
+    public int coins = 0;
     public int gems = 0;
 
     public int doorDamage = 15;

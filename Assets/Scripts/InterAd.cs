@@ -7,7 +7,7 @@ using System;
 public class InterAd : MonoBehaviour
 {
     private InterstitialAd interstitialAd;
-    private string interstitialUnityId = "ca-app-pub-3940256099942544/1033173712";
+    private string interstitialUnityId = "ca-app-pub-7318566780860459/4457945179";
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject hoodMenu;
     [SerializeField] GameManagerScript gameManagerScript;

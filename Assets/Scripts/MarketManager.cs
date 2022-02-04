@@ -10,7 +10,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField] int doorDamageUpgradeValue = 3;
     [SerializeField] int healthUpgradePrice = 100;
     [SerializeField] int doorDamageUpgradegPrice = 20; //gems
-    [SerializeField] int specialSlotPrice = 100;
+    [SerializeField] int specialSlotPrice = 2000;
     [SerializeField] int toiletSlotPrice = 100; // gems
 
     // Pop Ups
@@ -37,6 +37,10 @@ public class MarketManager : MonoBehaviour
     {
         saveManager = SaveManager.Instance;
         SaveManager.Instance.Load();
+
+        buySpecialSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Second Building " + specialSlotPrice);
+        buyToiletSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Toilet  " + toiletSlotPrice);
+
         if (saveManager.State.speacialBuildigPurchased)
         {
             buySpecialSlotButton.interactable = false;

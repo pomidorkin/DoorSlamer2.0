@@ -6,7 +6,7 @@ using System;
 
 public class RewAd : MonoBehaviour
 {
-    private string rewardedUnityId = "ca-app-pub-3940256099942544/5224354917";
+    private string rewardedUnityId = "ca-app-pub-7318566780860459/4986049475";
     private RewardedAd rewardedAd;
     private RewardedAd rewardedCoins;
     [SerializeField] Building building;
