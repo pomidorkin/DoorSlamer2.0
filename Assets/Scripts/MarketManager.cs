@@ -39,7 +39,15 @@ public class MarketManager : MonoBehaviour
         SaveManager.Instance.Load();
 
         buySpecialSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Second Building " + specialSlotPrice);
+        if (saveManager.State.coins < specialSlotPrice || saveManager.State.speacialBuildigPurchased)
+        {
+            buySpecialSlotButton.interactable = false;
+        }
         buyToiletSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Toilet  " + toiletSlotPrice);
+        if (saveManager.State.gems < toiletSlotPrice || saveManager.State.toiletPurchased)
+        {
+            buyToiletSlotButton.interactable = false;
+        }
 
         if (saveManager.State.speacialBuildigPurchased)
         {
@@ -56,6 +64,43 @@ public class MarketManager : MonoBehaviour
 
         healthUpgradeButtonText.text = healthUpgradePrice.ToString();
         doorDamageUpgradeButtonText.text = (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter).ToString();
+
+        if ((saveManager.State.coins - (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter)) >= 0 && saveManager.State.buildingHealthUpgradeCounter < 10)
+        {
+            healthUpgradeButtonText.text = (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter).ToString();
+            if ((saveManager.State.coins - (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter)) < 0)
+            {
+                upgradeBuildingHealthButton.interactable = false;
+            }
+        }
+        else if (saveManager.State.buildingHealthUpgradeCounter >= 10)
+        {
+            healthUpgradeButtonText.text = "Max";
+            upgradeBuildingHealthButton.interactable = false;
+        }
+        else
+        {
+            upgradeBuildingHealthButton.interactable = false;
+        }
+
+        if ((saveManager.State.gems - (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter)) >= 0 && saveManager.State.doorDamageUpgradeCounter < 7) // max 6 upgrades
+        {
+            doorDamageUpgradeButtonText.text = (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter).ToString();
+            if ((saveManager.State.gems - (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter)) < 0)
+            {
+                upgradeDoorDamageButton.interactable = false;
+            }
+            Debug.Log(saveManager.State.doorDamageUpgradeCounter.ToString());
+        }
+        else if (saveManager.State.doorDamageUpgradeCounter >= 7)
+        {
+            doorDamageUpgradeButtonText.text = "Max";
+            upgradeDoorDamageButton.interactable = false;
+        }
+        else
+        {
+            upgradeDoorDamageButton.interactable = false;
+        }
     }
 
     public void OpenMarketMenu(bool isOpen)

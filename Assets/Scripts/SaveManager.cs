@@ -36,13 +36,14 @@ public class SaveManager : MonoBehaviour
     private static SaveManager _instance = null;
 
     [Header("Logic")]
-    [SerializeField] private string saveFileName = "data.ss";
+    [SerializeField] private string saveFileName;
     [SerializeField] private bool loadOnStart = true;
     private Inventory state;
     private BinaryFormatter formatter;
 
     private void Awake()
     {
+        saveFileName = Application.persistentDataPath + "/data.ss";
         formatter = new BinaryFormatter();
         DontDestroyOnLoad(this.gameObject);
 
@@ -50,6 +51,8 @@ public class SaveManager : MonoBehaviour
         {
             Load();
         }
+
+        Debug.Log(Application.persistentDataPath + "/data.ss");
     }
 
    

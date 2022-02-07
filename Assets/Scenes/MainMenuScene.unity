@@ -7753,7 +7753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2851618203b924c48ac34163232c342f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  builgindHealthUpgradeValue: 20
+  builgindHealthUpgradeValue: 50
   doorDamageUpgradeValue: 3
   healthUpgradePrice: 100
   doorDamageUpgradegPrice: 20

@@ -29,7 +29,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4579894509356686968}
   m_RootOrder: 0
@@ -53,7 +52,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -127,7 +125,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4843907, y: 1.4843907, z: 1.4843907}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8099613565115551669}
   m_Father: {fileID: 0}
@@ -214,8 +211,8 @@ MonoBehaviour:
   - {fileID: 1965423065467750, guid: 46e3fad9d63edad4e95366d675950f78, type: 3}
   moveSpeed: 2
   health: 100
-  damage: 15
-  energyValue: 3
+  damage: 5
+  energyValue: 5
   minCoinValue: 1
   maxCoinValue: 5
   attackSpeed: 2
