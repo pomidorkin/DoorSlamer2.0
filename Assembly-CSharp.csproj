@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\IAPCoreTest.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\AdInitialize.cs" />
     <Compile Include="Assets\Scripts\RewAd.cs" />
@@ -70,7 +69,6 @@
     <Compile Include="Assets\Scripts\SaveManager.cs" />
     <Compile Include="Assets\Scripts\HealthDisplay.cs" />
     <Compile Include="Assets\Samples\In App Purchasing\4.1.0\02 Buying Subscription\BuyingSubscription.cs" />
-    <Compile Include="Assets\IAPShop.cs" />
     <Compile Include="Assets\Scripts\BalanceDisplay.cs" />
     <Compile Include="Assets\Scripts\IAPCore.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
@@ -93,8 +91,7 @@
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Scripts\EnergyCounter.cs" />
     <Compile Include="Assets\Samples\In App Purchasing\4.1.0\01 Buying Consumables\BuyingConsumables.cs" />
-    <Compile Include="Assets\Debugger.cs" />
-    <Compile Include="Assets\IAPManager.cs" />
+    <Compile Include="Assets\Scripts\IAPManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

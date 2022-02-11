@@ -43,12 +43,12 @@ public class MarketManager : MonoBehaviour
         SaveManager.Instance.Load();
 
 
-        //ManageButtons();
+        ManageButtons();
 
         
     }
 
-    /*public void ManageButtons()
+    public void ManageButtons()
     {
         SaveManager.Instance.Load();
         balanceDisplay.DisplayBalance();
@@ -107,7 +107,7 @@ public class MarketManager : MonoBehaviour
         if ((saveManager.State.gems - (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter)) >= 0 && saveManager.State.doorDamageUpgradeCounter < 7) // max 6 upgrades
         {
             doorDamageUpgradeButtonText.text = (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter).ToString();
-                upgradeDoorDamageButton.interactable = true;
+            upgradeDoorDamageButton.interactable = true;
             Debug.Log(saveManager.State.doorDamageUpgradeCounter.ToString());
         }
         else if (saveManager.State.doorDamageUpgradeCounter >= 7)
@@ -119,7 +119,7 @@ public class MarketManager : MonoBehaviour
         {
             upgradeDoorDamageButton.interactable = false;
         }
-    }*/
+    }
 
     public void OpenMarketMenu(bool isOpen)
     {
@@ -129,7 +129,7 @@ public class MarketManager : MonoBehaviour
 
     public void OpenUpgradeMenu(bool isOpen)
     {
-        //ManageButtons();
+        ManageButtons();
         upgradeMenu.gameObject.SetActive(isOpen);
         footer.gameObject.SetActive(!isOpen);
     }
