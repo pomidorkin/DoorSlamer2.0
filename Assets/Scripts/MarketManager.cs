@@ -28,25 +28,49 @@ public class MarketManager : MonoBehaviour
     [SerializeField] Button upgradeBuildingHealthButton;
     [SerializeField] Button disableAdsButton;
 
+    [SerializeField] TMP_Text buySecnodBuildingText;
+    [SerializeField] TMP_Text buyToiletText;
+
     //
     [SerializeField] BalanceDisplay balanceDisplay;
 
     SaveManager saveManager;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         saveManager = SaveManager.Instance;
         SaveManager.Instance.Load();
 
-        buySpecialSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Second Building " + specialSlotPrice);
+
+        //ManageButtons();
+
+        
+    }
+
+    /*public void ManageButtons()
+    {
+        SaveManager.Instance.Load();
+        balanceDisplay.DisplayBalance();
+        //buySpecialSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Second Building " + specialSlotPrice);
+        buySecnodBuildingText.text = ("Buy Second Building " + specialSlotPrice);
         if (saveManager.State.coins < specialSlotPrice || saveManager.State.speacialBuildigPurchased)
         {
             buySpecialSlotButton.interactable = false;
         }
-        buyToiletSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Toilet  " + toiletSlotPrice);
+        else
+        {
+            buySpecialSlotButton.interactable = true;
+        }
+        //buyToiletSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Toilet  " + toiletSlotPrice);
+        buyToiletText.text = ("Buy Toilet  " + toiletSlotPrice);
         if (saveManager.State.gems < toiletSlotPrice || saveManager.State.toiletPurchased)
         {
             buyToiletSlotButton.interactable = false;
+        }
+        else
+        {
+            buyToiletSlotButton.interactable = true;
         }
 
         if (saveManager.State.speacialBuildigPurchased)
@@ -68,10 +92,7 @@ public class MarketManager : MonoBehaviour
         if ((saveManager.State.coins - (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter)) >= 0 && saveManager.State.buildingHealthUpgradeCounter < 10)
         {
             healthUpgradeButtonText.text = (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter).ToString();
-            if ((saveManager.State.coins - (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter)) < 0)
-            {
-                upgradeBuildingHealthButton.interactable = false;
-            }
+            upgradeBuildingHealthButton.interactable = true;
         }
         else if (saveManager.State.buildingHealthUpgradeCounter >= 10)
         {
@@ -86,10 +107,7 @@ public class MarketManager : MonoBehaviour
         if ((saveManager.State.gems - (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter)) >= 0 && saveManager.State.doorDamageUpgradeCounter < 7) // max 6 upgrades
         {
             doorDamageUpgradeButtonText.text = (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter).ToString();
-            if ((saveManager.State.gems - (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter)) < 0)
-            {
-                upgradeDoorDamageButton.interactable = false;
-            }
+                upgradeDoorDamageButton.interactable = true;
             Debug.Log(saveManager.State.doorDamageUpgradeCounter.ToString());
         }
         else if (saveManager.State.doorDamageUpgradeCounter >= 7)
@@ -101,7 +119,7 @@ public class MarketManager : MonoBehaviour
         {
             upgradeDoorDamageButton.interactable = false;
         }
-    }
+    }*/
 
     public void OpenMarketMenu(bool isOpen)
     {
@@ -111,6 +129,7 @@ public class MarketManager : MonoBehaviour
 
     public void OpenUpgradeMenu(bool isOpen)
     {
+        //ManageButtons();
         upgradeMenu.gameObject.SetActive(isOpen);
         footer.gameObject.SetActive(!isOpen);
     }

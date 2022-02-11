@@ -12,7 +12,12 @@ public class Toilet : MonoBehaviour
     [SerializeField] int energyPrice = 50;
     [SerializeField] EnergyCounter energyCounter;
     [SerializeField] GameObject toiletObject;
+    [SerializeField] GameObject fartArea;
+    [SerializeField] ParticleSystem fartSmoke;
+    private float fartCounter;
     private bool spawned = false;
+
+    private IEnumerator coroutine;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +26,8 @@ public class Toilet : MonoBehaviour
         ActivateButton(saveManager);
         spawnToiletButton.GetComponentInChildren<TMP_Text>().text = ("Spawn Toilet " + energyPrice.ToString());
     }
+
+
 
     private void ActivateButton(SaveManager saveManager)
     {
@@ -59,18 +66,29 @@ public class Toilet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space) && spawned)
+        if (fartCounter < 5f)
         {
-            Attack();
-        }*/
+            fartCounter += Time.deltaTime;
+        }
     }
 
     public void Attack()
     {
-        if (spawned)
+        if (spawned && fartCounter >= 1.5f)
         {
-            // Выпускать облако едкого дыма, дебафающего зомби
+            fartArea.SetActive(true);
+            fartCounter = 0;
+            coroutine = SetTriggerActiveFalse(2f);
+            StartCoroutine(coroutine);
+            fartSmoke.Play();
         }
+        Debug.Log("Toilet is attacking");
+    }
+
+    private IEnumerator SetTriggerActiveFalse(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        fartArea.SetActive(false);
     }
 
     public int GetEnerdyPrice()

@@ -19,6 +19,8 @@ public class Zombie : MonoBehaviour
     SaveManager saveManager;
     private float currentMoveSpeed = 0;
 
+    private bool isSlowed = false;
+
     private EnergyCounter energyCounter;
     private BalanceDisplay balanceDisplay;
 
@@ -91,6 +93,7 @@ public class Zombie : MonoBehaviour
         }
     }
 
+
     private void DestroySelf()
     {
         saveManager.State.coins += Random.Range(minCoinValue, maxCoinValue);
@@ -130,5 +133,25 @@ public class Zombie : MonoBehaviour
     public void AddHealth(int amount)
     {
         health += amount;
+    }
+
+    public float GetMoveSpeed()
+    {
+        return currentMoveSpeed;
+    }
+
+    public void SetMoveSpeed(float newMoveSpeed)
+    {
+        this.currentMoveSpeed = newMoveSpeed;
+    }
+
+    public bool IsSlowed()
+    {
+        return isSlowed;
+    }
+
+    public void SetSlowed(bool isSlowed)
+    {
+        this.isSlowed = isSlowed;
     }
 }

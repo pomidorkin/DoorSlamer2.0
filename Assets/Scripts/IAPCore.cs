@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Purchasing; //библиотека с покупками, будет доступна когда активируем сервисы
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений из Unity Purchasing
 {
@@ -14,17 +14,20 @@ public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений и
     public static string gems1000 = "gems1000";
 
     SaveManager saveManager;
-    [SerializeField] BalanceDisplay balanceDisplay;
-    [SerializeField] Button disableAdsButton;
+    //[SerializeField] BalanceDisplay balanceDisplay;
+    //private BalanceDisplay balanceDisplay;
+    //[SerializeField] Button disableAdsButton;
+    //[SerializeField] MarketManager marketManager;
 
     void Start()
     {
-        saveManager = SaveManager.Instance;
-        SaveManager.Instance.Load();
+        //saveManager = SaveManager.Instance;
+        //SaveManager.Instance.Load();
         if (m_StoreController == null) //если еще не инициализаровали систему Unity Purchasing, тогда инициализируем
         {
             InitializePurchasing();
         }
+
     }
 
     public void InitializePurchasing()
@@ -93,9 +96,10 @@ public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений и
         {
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 
-            saveManager.State.removeAddPurchased = true;
-            SaveManager.Instance.Save();
-            disableAdsButton.interactable = false;
+            //saveManager.State.removeAddPurchased = true;
+            //SaveManager.Instance.Save();
+            //disableAdsButton.interactable = false; // ?
+            
 
         }
         else if (String.Equals(args.purchasedProduct.definition.id, gems100, StringComparison.Ordinal))
@@ -103,27 +107,33 @@ public class IAPCore : MonoBehaviour, IStoreListener //для получения сообщений и
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 
             //действия при покупке
-            saveManager.State.gems += 100;
-            SaveManager.Instance.Save();
-            balanceDisplay.DisplayBalance();
+            //saveManager.State.gems += 100;
+            //SaveManager.Instance.Save();
+            //FindObjectOfType<BalanceDisplay>().DisplayBalance();
+            //FindObjectOfType<MarketManager>().ManageButtons(); // ?
+            //marketManager.ManageButtons();
         }
         else if (String.Equals(args.purchasedProduct.definition.id, gems300, StringComparison.Ordinal))
         {
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 
             //действия при покупке
-            saveManager.State.gems += 300;
-            SaveManager.Instance.Save();
-            balanceDisplay.DisplayBalance();
+            //saveManager.State.gems += 300;
+            //SaveManager.Instance.Save();
+            //FindObjectOfType<BalanceDisplay>().DisplayBalance();
+            //FindObjectOfType<MarketManager>().ManageButtons(); // ?
+            //marketManager.ManageButtons();
         }
         else if (String.Equals(args.purchasedProduct.definition.id, gems1000, StringComparison.Ordinal))
         {
             Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 
             //действия при покупке
-            saveManager.State.gems += 1000;
-            SaveManager.Instance.Save();
-            balanceDisplay.DisplayBalance();
+            //saveManager.State.gems += 1000;
+            //SaveManager.Instance.Save();
+            //FindObjectOfType<BalanceDisplay>().DisplayBalance();
+            //FindObjectOfType<MarketManager>().ManageButtons(); // ?
+            //marketManager.ManageButtons();
         }
         else
         {
