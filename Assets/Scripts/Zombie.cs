@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
     private Building buildingSlot;
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] int health = 100;
-    [SerializeField] int damage = 15;
+    [SerializeField] int damage = 5;
     [SerializeField] int energyValue = 3;
     [SerializeField] int minCoinValue = 1;
     [SerializeField] int maxCoinValue = 5;
