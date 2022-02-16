@@ -36,6 +36,13 @@ public class Zombie : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
+    public event System.Action<int> OnHealthUpdated;
+
+    private void HandleHealthUpdated(int newHealth)
+    {
+        OnHealthUpdated?.Invoke(newHealth);
+    }
+
     private void SpawnRandomZombieModel()
     {
         int zombieNumber = Random.Range(0, (zombieModels.Length - 1));
@@ -70,6 +77,7 @@ public class Zombie : MonoBehaviour
             if (collision.gameObject.GetComponent<Door>())
             {
                 health -= collision.gameObject.GetComponent<Door>().GetDoorDamage();
+                HandleHealthUpdated(health);
                 Debug.Log("My health: " + health);
                 if(health <= 0)
                 {
@@ -84,6 +92,7 @@ public class Zombie : MonoBehaviour
             if (collision.gameObject.GetComponent<Weapon>())
             {
                 health -= collision.gameObject.GetComponent<Weapon>().GetWeaponDamage();
+                HandleHealthUpdated(health);
                 Debug.Log("My health: " + health);
                 if (health <= 0)
                 {
@@ -153,5 +162,10 @@ public class Zombie : MonoBehaviour
     public void SetSlowed(bool isSlowed)
     {
         this.isSlowed = isSlowed;
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }

@@ -86,7 +86,7 @@ public class MarketManager : MonoBehaviour
             disableAdsButton.interactable = false;
         }
 
-        healthUpgradeButtonText.text = healthUpgradePrice.ToString();
+        healthUpgradeButtonText.text = (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter).ToString();
         doorDamageUpgradeButtonText.text = (doorDamageUpgradegPrice * saveManager.State.doorDamageUpgradeCounter).ToString();
 
         if ((saveManager.State.coins - (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter)) >= 0 && saveManager.State.buildingHealthUpgradeCounter < 10)

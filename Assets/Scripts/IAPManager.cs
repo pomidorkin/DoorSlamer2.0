@@ -23,6 +23,13 @@ public class IAPManager : MonoBehaviour, IStoreListener
         saveManager = SaveManager.Instance;
         SaveManager.Instance.Load();
         InitializePurchasing();
+
+        if (saveManager.State.firstStart)
+        {
+            saveManager.State.firstStart = false;
+            SaveManager.Instance.Save();
+            RestoreMyProduct();
+        }
     }
 
     private void InitializePurchasing()
@@ -47,33 +54,53 @@ public class IAPManager : MonoBehaviour, IStoreListener
         var product = args.purchasedProduct;
         if (product.definition.id == gems100)
         {
-            saveManager.State.gems += 100;
-            SaveManager.Instance.Save();
-            FindObjectOfType<MarketManager>().ManageButtons();
-            marketManager.ManageButtons();
+            Gems100();
         }
         if (product.definition.id == gems300)
         {
-            saveManager.State.gems += 300;
-            SaveManager.Instance.Save();
-            FindObjectOfType<MarketManager>().ManageButtons();
-            marketManager.ManageButtons();
+            Gems300();
         }
         if (product.definition.id == gems1000)
         {
-            saveManager.State.gems += 1000;
-            SaveManager.Instance.Save();
-            FindObjectOfType<MarketManager>().ManageButtons();
-            marketManager.ManageButtons();
+            Gems1000();
         }
         if (product.definition.id == noads)
         {
-            saveManager.State.removeAddPurchased = true;
-            SaveManager.Instance.Save();
-            disableAdsButton.interactable = false;
+            NoAds();
         }
 
         return PurchaseProcessingResult.Complete;
+    }
+
+    private void NoAds()
+    {
+        saveManager.State.removeAddPurchased = true;
+        SaveManager.Instance.Save();
+        disableAdsButton.interactable = false;
+    }
+
+    private void Gems1000()
+    {
+        saveManager.State.gems += 1000;
+        SaveManager.Instance.Save();
+        FindObjectOfType<MarketManager>().ManageButtons();
+        marketManager.ManageButtons();
+    }
+
+    private void Gems300()
+    {
+        saveManager.State.gems += 300;
+        SaveManager.Instance.Save();
+        FindObjectOfType<MarketManager>().ManageButtons();
+        marketManager.ManageButtons();
+    }
+
+    private void Gems100()
+    {
+        saveManager.State.gems += 100;
+        SaveManager.Instance.Save();
+        FindObjectOfType<MarketManager>().ManageButtons();
+        marketManager.ManageButtons();
     }
 
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
@@ -91,6 +118,14 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
     {
         //throw new System.NotImplementedException();
+    }
+
+    public void RestoreMyProduct()
+    {
+        if (CodelessIAPStoreListener.Instance.StoreController.products.WithID(noads).hasReceipt)
+        {
+            NoAds();
+        }
     }
 
 }
