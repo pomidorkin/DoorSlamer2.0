@@ -7,8 +7,10 @@ public class EnergyCounter : MonoBehaviour
 {
     [SerializeField] Button spawnSpecialButton;
     [SerializeField] Button spawnToiletButton;
+    [SerializeField] Button vehicleButton;
     [SerializeField] SpecialBuilding specialBuilding;
     [SerializeField] Toilet toilet;
+    [SerializeField] VehicleController vehicle;
     private int maxEnergy = 100;
     public Slider slider;
     // Start is called before the first frame update
@@ -42,11 +44,17 @@ public class EnergyCounter : MonoBehaviour
         {
             spawnToiletButton.interactable = true;
         }
+        if (slider.value >= vehicle.GetEnerdyPrice())
+        {
+            vehicleButton.interactable = true;
+        }
+        
     }
 
     public void SetButtonsInteractable(bool value)
     {
         spawnSpecialButton.interactable = value;
         spawnToiletButton.interactable = value;
+        vehicleButton.interactable = value;
     }
 }

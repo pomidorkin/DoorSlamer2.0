@@ -18,6 +18,8 @@ public class Inventory
 
     public bool toiletPurchased { set; get; }
     public bool speacialBuildigPurchased { set; get; }
+    public bool vehiclePruchased { set; get; }
+    public bool healingObjectPurchased { set; get; }
     public bool removeAddPurchased { set; get; }
 
     public float musicVolume = 1.0f;

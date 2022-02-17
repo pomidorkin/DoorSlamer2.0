@@ -81,6 +81,7 @@ public class Zombie : MonoBehaviour
                 Debug.Log("My health: " + health);
                 if(health <= 0)
                 {
+                    AddEnergyAfterDeath();
                     DestroySelf();
                 }
             }
@@ -96,10 +97,21 @@ public class Zombie : MonoBehaviour
                 Debug.Log("My health: " + health);
                 if (health <= 0)
                 {
+                    AddEnergyAfterDeath();
                     DestroySelf();
                 }
             }
         }
+
+        if (collision.gameObject.tag == "Vehicle")
+        {
+            Debug.Log("Collision with the vehicle");
+            if (collision.gameObject.GetComponentInParent<VehicleController>())
+            {
+                DestroySelf();
+            }
+        }
+
     }
 
 
@@ -107,13 +119,18 @@ public class Zombie : MonoBehaviour
     {
         saveManager.State.coins += Random.Range(minCoinValue, maxCoinValue);
         SaveManager.Instance.Save();
-        if(energyCounter == null)
+        //AddEnergyAfterDeath();
+        balanceDisplay.DisplayBalance();
+        Destroy(gameObject);
+    }
+
+    private void AddEnergyAfterDeath()
+    {
+        if (energyCounter == null)
         {
             energyCounter = FindObjectOfType<EnergyCounter>();
         }
         energyCounter.AddEnergy(energyValue);
-        balanceDisplay.DisplayBalance();
-        Destroy(gameObject);
     }
 
     public void Attack()

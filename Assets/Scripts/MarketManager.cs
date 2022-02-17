@@ -12,6 +12,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField] int doorDamageUpgradegPrice = 20; //gems
     [SerializeField] int specialSlotPrice = 2000;
     [SerializeField] int toiletSlotPrice = 100; // gems
+    [SerializeField] int vehiclePrice = 3000;
 
     // Pop Ups
     [SerializeField] GameObject marketMenu;
@@ -22,6 +23,7 @@ public class MarketManager : MonoBehaviour
     // Buttons
     [SerializeField] Button buySpecialSlotButton;
     [SerializeField] Button buyToiletSlotButton;
+    [SerializeField] Button buyVehicleButton;
     [SerializeField] TMP_Text healthUpgradeButtonText;
     [SerializeField] TMP_Text doorDamageUpgradeButtonText;
     [SerializeField] Button upgradeDoorDamageButton;
@@ -30,6 +32,7 @@ public class MarketManager : MonoBehaviour
 
     [SerializeField] TMP_Text buySecnodBuildingText;
     [SerializeField] TMP_Text buyToiletText;
+    [SerializeField] TMP_Text buyVehicleText;
 
     //
     [SerializeField] BalanceDisplay balanceDisplay;
@@ -52,7 +55,7 @@ public class MarketManager : MonoBehaviour
     {
         SaveManager.Instance.Load();
         balanceDisplay.DisplayBalance();
-        //buySpecialSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Second Building " + specialSlotPrice);
+
         buySecnodBuildingText.text = ("Buy Second Building " + specialSlotPrice);
         if (saveManager.State.coins < specialSlotPrice || saveManager.State.speacialBuildigPurchased)
         {
@@ -62,7 +65,7 @@ public class MarketManager : MonoBehaviour
         {
             buySpecialSlotButton.interactable = true;
         }
-        //buyToiletSlotButton.gameObject.GetComponentInChildren<TMP_Text>().text = ("Buy Toilet  " + toiletSlotPrice);
+
         buyToiletText.text = ("Buy Toilet  " + toiletSlotPrice);
         if (saveManager.State.gems < toiletSlotPrice || saveManager.State.toiletPurchased)
         {
@@ -73,6 +76,17 @@ public class MarketManager : MonoBehaviour
             buyToiletSlotButton.interactable = true;
         }
 
+        buyVehicleText.text = ("Buy Vehicle  " + vehiclePrice);
+        if (saveManager.State.coins < vehiclePrice || saveManager.State.vehiclePruchased)
+        {
+            buyVehicleButton.interactable = false;
+        }
+        else
+        {
+            buyVehicleButton.interactable = true;
+        }
+
+        // Disable buttons if purchased
         if (saveManager.State.speacialBuildigPurchased)
         {
             buySpecialSlotButton.interactable = false;
@@ -84,6 +98,10 @@ public class MarketManager : MonoBehaviour
         if (saveManager.State.removeAddPurchased)
         {
             disableAdsButton.interactable = false;
+        }
+        if (saveManager.State.vehiclePruchased)
+        {
+            buyVehicleButton.interactable = false;
         }
 
         healthUpgradeButtonText.text = (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter).ToString();
@@ -233,6 +251,23 @@ public class MarketManager : MonoBehaviour
         }
         balanceDisplay.DisplayBalance();
         Debug.Log(saveManager.State.coins);
+    }
+
+    public void BuyVehiclet()
+    {
+        if ((saveManager.State.coins - vehiclePrice) >= 0)
+        {
+            saveManager.State.coins -= vehiclePrice;
+            saveManager.State.vehiclePruchased = true;
+            buyVehicleButton.interactable = false;
+            SaveManager.Instance.Save();
+            Debug.Log(saveManager.State.coins);
+        }
+        else
+        {
+            // Not enough money pop up
+        }
+        balanceDisplay.DisplayBalance();
     }
 
     public SaveManager GetSaveManager()
