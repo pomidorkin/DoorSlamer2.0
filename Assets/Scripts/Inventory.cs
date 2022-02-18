@@ -7,8 +7,8 @@ public class Inventory
 {
     public bool firstStart = true;
 
-    public int coins = 10000;
-    public int gems = 10000;
+    public int coins = 0;
+    public int gems = 0;
 
     public int doorDamage = 15;
     public int doorDamageUpgradeCounter = 1;

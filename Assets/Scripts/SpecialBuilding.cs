@@ -29,7 +29,7 @@ public class SpecialBuilding : MonoBehaviour
         ActivateButton(saveManager);
         timeCounter = 0;
 
-        spawnSpecialButton.GetComponentInChildren<TMP_Text>().text = ("Spawn Special " + energyPrice.ToString());
+        spawnSpecialButton.GetComponentInChildren<TMP_Text>().text = ("Spawn Pub " + energyPrice.ToString());
     }
 
     private void SpawnDoor()

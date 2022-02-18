@@ -59,7 +59,7 @@ public class MarketManager : MonoBehaviour
         SaveManager.Instance.Load();
         balanceDisplay.DisplayBalance();
 
-        buySecnodBuildingText.text = ("Buy Second Building " + specialSlotPrice);
+        buySecnodBuildingText.text = (specialSlotPrice.ToString());
         if (saveManager.State.coins < specialSlotPrice || saveManager.State.speacialBuildigPurchased)
         {
             buySpecialSlotButton.interactable = false;
@@ -69,7 +69,7 @@ public class MarketManager : MonoBehaviour
             buySpecialSlotButton.interactable = true;
         }
 
-        buyToiletText.text = ("Buy Toilet  " + toiletSlotPrice);
+        buyToiletText.text = (toiletSlotPrice.ToString());
         if (saveManager.State.gems < toiletSlotPrice || saveManager.State.toiletPurchased)
         {
             buyToiletSlotButton.interactable = false;
@@ -79,7 +79,7 @@ public class MarketManager : MonoBehaviour
             buyToiletSlotButton.interactable = true;
         }
 
-        buyVehicleText.text = ("Buy Vehicle  " + vehiclePrice);
+        buyVehicleText.text = (vehiclePrice.ToString());
         if (saveManager.State.coins < vehiclePrice || saveManager.State.vehiclePruchased)
         {
             buyVehicleButton.interactable = false;
@@ -89,7 +89,7 @@ public class MarketManager : MonoBehaviour
             buyVehicleButton.interactable = true;
         }
 
-        buyHealingObjectText.text = ("Buy Tree  " + healingObjectPrice);
+        buyHealingObjectText.text = (healingObjectPrice.ToString());
         if (saveManager.State.coins < healingObjectPrice || saveManager.State.healingObjectPurchased)
         {
             buyHealingObjectButton.interactable = false;

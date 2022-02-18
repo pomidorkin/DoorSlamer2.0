@@ -447,7 +447,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -9549,6 +9549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_TreeDead_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6960914229346949880, guid: 07b8bbfbef372b44182bb95349c1cca2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7024533098689783030, guid: 07b8bbfbef372b44182bb95349c1cca2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -9765,6 +9769,10 @@ PrefabInstance:
     - target: {fileID: 7830423024382080628, guid: 88e7e77aa98b65d4a915c81eb64ef7d0, type: 3}
       propertyPath: m_Name
       value: SM_Generic_TreeDead_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830423024382080628, guid: 88e7e77aa98b65d4a915c81eb64ef7d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e7e77aa98b65d4a915c81eb64ef7d0, type: 3}
@@ -11197,7 +11205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spawn Special 99
+  m_text: Spawn Pub 99
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
@@ -11231,7 +11239,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
