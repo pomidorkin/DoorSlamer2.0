@@ -64,6 +64,10 @@ public class VehicleController : MonoBehaviour
     {
         energyCounter.slider.value -= 100;
         energyCounter.SetButtonsInteractable(false);
+        if (energyCounter.slider.value < 100)
+        {
+            energyCounter.SetVehicleButtonInteractable(false);
+        }
         isMoving = true;
     }
 

@@ -28,10 +28,4 @@ public class HealthDisplay : MonoBehaviour
     {
         slider.value = amount;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

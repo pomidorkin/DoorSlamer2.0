@@ -13,6 +13,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField] int specialSlotPrice = 2000;
     [SerializeField] int toiletSlotPrice = 100; // gems
     [SerializeField] int vehiclePrice = 3000;
+    [SerializeField] int healingObjectPrice = 2500;
 
     // Pop Ups
     [SerializeField] GameObject marketMenu;
@@ -24,6 +25,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField] Button buySpecialSlotButton;
     [SerializeField] Button buyToiletSlotButton;
     [SerializeField] Button buyVehicleButton;
+    [SerializeField] Button buyHealingObjectButton;
     [SerializeField] TMP_Text healthUpgradeButtonText;
     [SerializeField] TMP_Text doorDamageUpgradeButtonText;
     [SerializeField] Button upgradeDoorDamageButton;
@@ -33,6 +35,7 @@ public class MarketManager : MonoBehaviour
     [SerializeField] TMP_Text buySecnodBuildingText;
     [SerializeField] TMP_Text buyToiletText;
     [SerializeField] TMP_Text buyVehicleText;
+    [SerializeField] TMP_Text buyHealingObjectText;
 
     //
     [SerializeField] BalanceDisplay balanceDisplay;
@@ -86,6 +89,16 @@ public class MarketManager : MonoBehaviour
             buyVehicleButton.interactable = true;
         }
 
+        buyHealingObjectText.text = ("Buy Tree  " + healingObjectPrice);
+        if (saveManager.State.coins < healingObjectPrice || saveManager.State.healingObjectPurchased)
+        {
+            buyHealingObjectButton.interactable = false;
+        }
+        else
+        {
+            buyHealingObjectButton.interactable = true;
+        }
+
         // Disable buttons if purchased
         if (saveManager.State.speacialBuildigPurchased)
         {
@@ -102,6 +115,10 @@ public class MarketManager : MonoBehaviour
         if (saveManager.State.vehiclePruchased)
         {
             buyVehicleButton.interactable = false;
+        }
+        if (saveManager.State.healingObjectPurchased)
+        {
+            buyHealingObjectButton.interactable = false;
         }
 
         healthUpgradeButtonText.text = (healthUpgradePrice * saveManager.State.buildingHealthUpgradeCounter).ToString();
@@ -253,13 +270,30 @@ public class MarketManager : MonoBehaviour
         Debug.Log(saveManager.State.coins);
     }
 
-    public void BuyVehiclet()
+    public void BuyVehicle()
     {
         if ((saveManager.State.coins - vehiclePrice) >= 0)
         {
             saveManager.State.coins -= vehiclePrice;
             saveManager.State.vehiclePruchased = true;
             buyVehicleButton.interactable = false;
+            SaveManager.Instance.Save();
+            Debug.Log(saveManager.State.coins);
+        }
+        else
+        {
+            // Not enough money pop up
+        }
+        balanceDisplay.DisplayBalance();
+    }
+
+    public void BuyHealingObject()
+    {
+        if ((saveManager.State.coins - healingObjectPrice) >= 0)
+        {
+            saveManager.State.coins -= healingObjectPrice;
+            saveManager.State.healingObjectPurchased = true;
+            buyHealingObjectButton.interactable = false;
             SaveManager.Instance.Save();
             Debug.Log(saveManager.State.coins);
         }

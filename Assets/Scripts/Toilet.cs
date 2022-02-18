@@ -18,7 +18,7 @@ public class Toilet : MonoBehaviour
     private bool spawned = false;
 
     private IEnumerator coroutine;
-    // Start is called before the first frame update
+
     void Start()
     {
         var saveManager = SaveManager.Instance;
@@ -42,19 +42,17 @@ public class Toilet : MonoBehaviour
         if (energyCounter.slider.value >= energyPrice)
         {
             energyCounter.slider.value -= energyPrice;
-            //Instantiate(toiletPrefab, this.transform.position, Quaternion.identity);
-            //SpawnDoor();
             toiletObject.SetActive(true);
             spawned = true;
             spawnToiletButton.interactable = false;
         }
-        else
-        {
-            // Not enough energy
-        }
         if (energyCounter.slider.value < energyPrice)
         {
             energyCounter.SetButtonsInteractable(false);
+        }
+        if (energyCounter.slider.value < 100)
+        {
+            energyCounter.SetVehicleButtonInteractable(false);
         }
     }
 
@@ -63,7 +61,7 @@ public class Toilet : MonoBehaviour
         Instantiate(doorPrefab, this.transform.position, Quaternion.identity);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (fartCounter < 5f)

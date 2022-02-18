@@ -66,8 +66,11 @@ public class SpecialBuilding : MonoBehaviour
         {
             energyCounter.SetButtonsInteractable(false);
         }
-        
-        
+        if (energyCounter.slider.value < 100)
+        {
+            energyCounter.SetVehicleButtonInteractable(false);
+        }
+
     }
 
     void Update()

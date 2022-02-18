@@ -12,6 +12,7 @@ public class FartTrigger : MonoBehaviour
             if (!zombie.IsSlowed())
             {
                 zombie.SetMoveSpeed(zombie.GetMoveSpeed() * 0.5f);
+                zombie.SetSlowed(true);
             }
             Debug.Log("Zombie entered the fart area");
         }

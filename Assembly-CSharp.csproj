@@ -89,11 +89,12 @@
     <Compile Include="Assets\Scripts\InterAd.cs" />
     <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
     <Compile Include="Assets\Samples\In App Purchasing\4.1.0\03 Fetching Additional Products\FetchingAdditionalProducts.cs" />
+    <Compile Include="Assets\Scripts\VehicleController.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Scripts\EnergyCounter.cs" />
     <Compile Include="Assets\Samples\In App Purchasing\4.1.0\01 Buying Consumables\BuyingConsumables.cs" />
     <Compile Include="Assets\Scripts\IAPManager.cs" />
-    <Compile Include="Assets\Scripts\VehicleController.cs" />
+    <Compile Include="Assets\Scripts\HealingObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

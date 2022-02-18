@@ -68,6 +68,16 @@ public class Building : MonoBehaviour
         Debug.Log("Got hit!");
     }
 
+    public void IncreaseHealth(int amount)
+    {
+        if (health > 0 && health < maxHealth)
+        {
+            health += amount;
+            healthSlider.DecreaseValue(health);
+        }
+        
+    }
+
     public int FillHealth()
     {
         health = maxHealth;
